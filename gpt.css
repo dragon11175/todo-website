@@ -1,0 +1,60 @@
+button {
+    background-color: antiquewhite;
+    width: 150px;
+    height: 50pxpx;
+    border: none;
+    cursor: pointer;
+}
+
+/* Click effect (blink green) */
+button:active {
+    animation: blinkGreen 0.3s ease;
+}
+
+@keyframes blinkGreen {
+    0% {
+        background-color: antiquewhite;
+    }
+    50% {
+        background-color: green;
+    }
+    100% {
+        background-color: antiquewhite;
+    }
+}
+
+
+#screen {
+    width: 90%;
+    min-height: 300px;
+    margin: 20px auto;
+    padding: 15px;
+
+    /* 🔥 Gradient Background */
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+
+    /* Glass effect */
+    backdrop-filter: blur(10px);
+
+    /* Border & shadow */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+    /* Scroll if too many tasks */
+    overflow-y: auto;
+}
+
+#screen {
+    width: 90%;
+    height: 400px; /* 🔥 FIXED HEIGHT */
+    margin: 20px auto;
+    padding: 10px;
+
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+    overflow-y: auto;  /* 🔥 vertical scroll */
+    overflow-x: hidden; /* ❌ horizontal overflow band */
+}

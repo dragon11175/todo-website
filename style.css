@@ -1,0 +1,18 @@
+body{
+ background-image:url("images/daredevil3.jpg");
+ background-size:cover;  
+  
+}
+
+#title{
+  color:red;
+  display:flex;
+  justify-content:center;
+}
+
+#taskAdder{
+  display:flex;
+  
+}
+
+
