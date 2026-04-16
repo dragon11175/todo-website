@@ -20,6 +20,15 @@ function displayTasks() {
         var h3 = document.createElement("h3");
         var tickmark = document.createElement("input");
         tickmark.type = "checkbox";
+        tickmark.checked = item.completed;
+        
+        tickmark.onchange = function () {
+         var tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+         tasks[index].completed = tickmark.checked;
+
+         localStorage.setItem("tasks", JSON.stringify(tasks));
+             };
         var rmvButton = document.createElement("button");
         var Edit = document.createElement("button");
 
@@ -82,7 +91,8 @@ function addtask() {
 
     tasks.push({
         task: task,
-        date: date
+        date: date,
+        completed:flase
     });
 
     localStorage.setItem("tasks", JSON.stringify(tasks));
